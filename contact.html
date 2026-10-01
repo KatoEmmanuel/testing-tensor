@@ -104,39 +104,38 @@
       </div>
 
       <div>
-        <div class="sheet-tag"><b>SHEET F—02</b><span>PROJECT INQUIRY</span></div>
-        <h2 class="h2" id="start-a-project">Start a Project</h2>
-        <p class="body-text" style="margin-top:12px;">Tell us about the project and someone from the team will follow up. Fields marked optional can be left blank.</p>
+        <div class="contact-form-panel">
+          <div class="sheet-tag"><b>SHEET F—02</b><span>PROJECT INQUIRY</span></div>
+          <h2 class="h2" id="start-a-project">Start a Project</h2>
+          <p class="body-text form-intro">Share what you have in mind and our team will follow up. Fields marked <strong>*</strong> are required; optional fields can be left blank.</p>
 
-        <form data-validate-form novalidate style="margin-top:32px;" method="POST" action="https://formsubmit.co/katoemmanganda1@gmail.com">
+        <form class="contact-form" method="POST" action="https://formsubmit.co/katoemmanganda1@gmail.com" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="New project inquiry — Tensor Engineering Solutions">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form-grid">
             <div class="field">
-              <label for="name">Full name</label>
+              <label for="name">Full name <span class="required" aria-hidden="true">*</span></label>
               <input type="text" id="name" name="name" required autocomplete="name">
-              <span class="err-msg" role="alert"></span>
             </div>
             <div class="field">
               <label for="company">Company <span class="opt">(optional)</span></label>
               <input type="text" id="company" name="company" autocomplete="organization">
-              <span class="err-msg" role="alert"></span>
             </div>
             <div class="field">
-              <label for="email">Email</label>
+              <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
               <input type="email" id="email" name="email" required autocomplete="email">
-              <span class="err-msg" role="alert"></span>
             </div>
             <div class="field">
-              <label for="phone">Phone</label>
+              <label for="phone">Phone <span class="required" aria-hidden="true">*</span></label>
               <input type="tel" id="phone" name="phone" required autocomplete="tel">
-              <span class="err-msg" role="alert"></span>
             </div>
             <div class="field">
               <label for="whatsapp">WhatsApp <span class="opt">(optional)</span></label>
               <input type="tel" id="whatsapp" name="whatsapp">
-              <span class="err-msg" role="alert"></span>
             </div>
             <div class="field">
-              <label for="project-type">Project type</label>
+              <label for="project-type">Project type <span class="required" aria-hidden="true">*</span></label>
               <select id="project-type" name="project-type" required>
                 <option value="">Select one</option>
                 <option>Commercial</option>
@@ -147,12 +146,10 @@
                 <option>Renovation</option>
                 <option>Other</option>
               </select>
-              <span class="err-msg" role="alert"></span>
             </div>
             <div class="field">
-              <label for="location">Project location</label>
+              <label for="location">Project location <span class="required" aria-hidden="true">*</span></label>
               <input type="text" id="location" name="location" required>
-              <span class="err-msg" role="alert"></span>
             </div>
             <div class="field">
               <label for="budget">Estimated budget <span class="opt">(optional)</span></label>
@@ -162,38 +159,33 @@
                 <option>5,000,001-10,000,000</option>
                 <option>10,000,001+</option>
               </select>
-              <span class="err-msg" role="alert"></span>
             </div>
             <div class="field full">
               <label for="timeline">Expected timeline <span class="opt">(optional)</span></label>
               <input type="text" id="timeline" name="timeline" placeholder="e.g. Starting within 3 months">
-              <span class="err-msg" role="alert"></span>
             </div>
             <div class="field full">
-              <label for="description">Project description</label>
+              <label for="description">Project description <span class="required" aria-hidden="true">*</span></label>
               <textarea id="description" name="description" required placeholder="Tell us about the site, the scope, and what you're trying to achieve."></textarea>
-              <span class="err-msg" role="alert"></span>
             </div>
           </div>
 
           <div class="file-field" style="margin-top:22px;">
             <div>
               <p style="font-weight:600;">Reference files <span class="opt" style="font-weight:400;">(optional)</span></p>
-              <p class="small muted" style="margin-top:4px;">Drawings, site photos or briefs. PDF, JPG or PNG, up to 25MB.</p>
+              <p class="small muted" style="margin-top:4px;">Drawings, site photos or briefs. PDF, JPG or PNG; 10MB total maximum.</p>
             </div>
             <input type="file" id="attachment" name="attachment" accept=".pdf,.jpg,.jpeg,.png" aria-describedby="attachment-help">
           </div>
-          <span id="attachment-help" class="visually-hidden">Upload requires a connected storage or email backend before it becomes functional.</span>
+          <span id="attachment-help" class="visually-hidden">Optional reference files are included with your project inquiry.</span>
 
           <div class="submit-row">
-            <button type="submit" class="btn btn-primary" data-submit-btn>
-              <span class="spinner" aria-hidden="true"></span>
-              <span class="btn-label">Discuss Your Project</span>
-            </button>
+            <button type="submit" class="btn btn-primary">Send project inquiry</button>
             <p class="small muted">We'll respond within 2 hours.</p>
           </div>
 
         </form>
+        </div>
       </div>
     </div>
   </section>
